@@ -2,21 +2,29 @@ const mongoose=require("mongoose")
 
 const jobSchema= new mongoose.Schema({
     title:{
-        type:String
+        type:String,
+        required:true
     },
     description:{
-        type:String
+        type:String,
+        required:true
     },
-    compnay:{
-        type:String
+    company:{
+        type:String,
+        required:true
     },
     location:{
-        type:String
+        type:String,
+        required:true
     },
     salary:{
-        type:Number
+        type:Number,
+        required:false,
+        default:0
     }
 
 })
 
-mongoose.model("jobs",jobSchema)
+const jobmodels=mongoose.model("jobs",jobSchema)
+
+module.exports=jobmodels;

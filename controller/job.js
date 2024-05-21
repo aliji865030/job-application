@@ -1,7 +1,17 @@
+const jobmodels=require("../models/job")
+
 const createJobs= async (req,res)=>{
+    const jobobj=req.body;
+    const newJob=new jobmodels(jobobj);
+    
+
+    const newlySavedData=await newJob.save();
+    console.log(req.body);
   res.json({
     success:true,
-    message:"Dummy create job api"
+    message:"Dummy create job api",
+    jobId:newlySavedData._id
+
   })
 }
 
