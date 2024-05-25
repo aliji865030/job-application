@@ -18,5 +18,5 @@ mongoose
 
 app.use(jobRoutes);
 
-app.listen(8080,()=>console.log("app is up and runing on port no 8080"))
+app.listen(10000,()=>console.log("app is up and runing on port no 10000"))
 
