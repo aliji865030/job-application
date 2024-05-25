@@ -10,7 +10,7 @@ app.use(express.json())
 // mongo connect
 
 mongoose
-.connect("mongodb://localhost:27017/jobapp")
+.connect("mongodb+srv://abbasalichand786:uRHjgPSSxFcQHLUQ@jobapp.00kjbti.mongodb.net/")
 .then(()=>console.log("database connectes success"))
 .catch((error)=>console.log(error))
 
