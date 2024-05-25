@@ -20,7 +20,8 @@ const jobSchema= new mongoose.Schema({
     salary:{
         type:Number,
         required:false,
-        default:0
+        default:0,
+        unique:true    // for preventing duplication
     }
 
 })
