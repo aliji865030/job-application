@@ -1,16 +1,20 @@
 const express=require("express");
 const mongoose=require("mongoose");
+const dotEnv=require("dotenv")
 
 const jobRoutes=require("./routes/job")
 
 const app=express();
 
+dotEnv.config();
+
 app.use(express.json())
+
 
 // mongo connect
 
 mongoose
-.connect("mongodb+srv://abbasalichand786:uRHjgPSSxFcQHLUQ@jobapp.00kjbti.mongodb.net/")
+.connect(process.env.DB_connection_URL)
 .then(()=>console.log("database connectes success"))
 .catch((error)=>console.log(error))
 

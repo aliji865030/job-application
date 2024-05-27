@@ -29,12 +29,12 @@ const listJob= async (req,res)=>{
    try {
     
        const {minSalary ,maxSalary}=req.query;
-       // const jobList= await jobmodels.find({
-       //     $and:[{ salary:{ $gte:minSalary } },
-       //     {salary:{$lte:maxSalary}}]
-       // }
+    //    const jobList= await jobmodels.find({
+    //        $and:[{ salary:{ $gte:minSalary } },
+    //        {salary:{$lte:maxSalary}}]
+    //    }
        
-       // );
+    //    );
     
        const jobList=await jobmodels.find();
        console.log(jobList);
